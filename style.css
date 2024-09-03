@@ -1,0 +1,195 @@
+body {
+    padding-top: 80px; /* Menambahkan padding untuk menghindari konten tertutupi navbar */
+}
+
+.navbar {
+    position: fixed; /* Membuat navbar tetap di bagian atas */
+    top: 0; /* Posisi dari atas halaman */
+    left: 0; /* Posisi dari sisi kiri */
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #98DBC6, #feb47b) !important;
+    height: 80px; 
+    display: flex; 
+    justify-content: space-between; 
+    z-index: 1000; /* Agar navbar tetap di atas konten lain */
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 20px; /* Sesuaikan padding untuk menjaga jarak antar item */
+    font-size: 18px; /* Opsional: Sesuaikan ukuran font untuk proporsi */
+}
+
+.navbar-brand {
+    margin-left: 300px; /* Atur margin sesuai kebutuhan */
+}
+
+.sticky-navbar {
+    background: linear-gradient(to right, #98DBC6, #feb47b);
+    transition: background 0.3s ease-in-out;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+.profileImage {
+    width: 300px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+
+.wave-icon {
+    margin-left: 10px;
+    animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel {
+    pointer-events: none; /* Menghilangkan interaksi dengan elemen carousel */
+}
+
+.carousel-inner {
+    overflow: hidden; /* Menyembunyikan bagian yang melebihi ukuran container */
+}
+
+.carousel-item {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between; /* Menyebar logo di sepanjang baris */
+    flex-wrap: wrap; /* Agar logo dapat membungkus ke baris berikutnya jika diperlukan */
+}
+
+.logo {
+    max-width: 500px; /* Atur ukuran maksimum gambar sesuai kebutuhan */
+    height: 50px;
+    margin: 5px; /* Tambahkan jarak antar logo jika diperlukan */
+}
+
+.typed {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+/* Container untuk lingkaran progress */
+.progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    position: relative;
+    margin: 0 auto 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Angka di tengah lingkaran */
+.progress-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lingkaran latar belakang */
+.progress-circle:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Animasi lingkaran berdasarkan skill */
+.skill-html {
+    background: conic-gradient(#ff6b6b 0% 50%, #e0e0e0 50% 100%);
+}
+
+.skill-css {
+    background: conic-gradient(#4db8ff 0% 50%, #e0e0e0 50% 100%);
+}
+
+.skill-js {
+    background: conic-gradient(#f7d154 0% 30%, #e0e0e0 30% 100%);
+}
+
+.skill-php {
+    background: conic-gradient(#8892bf 0% 30%, #e0e0e0 30% 100%);
+}
+
+/* Menambahkan animasi rotasi pada lingkaran */
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Efek hover untuk menambahkan interaksi */
+.progress-circle:hover {
+    animation: rotate 2s linear infinite;
+}
